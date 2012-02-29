@@ -43,7 +43,7 @@ class HumanHash
   	unpack_format = 'A2' * limit
   	bytes = hexdigest.unpack(unpack_format).collect { |x| x.hex }
   	compressed = compress(bytes, words)
-  	return (compressed.collect { |x| $word_list[x] }).join(separator)
+  	return (compressed.collect { |x| @word_list[x] }).join(separator)
   end
 
   def self.compress(bytes, target)
