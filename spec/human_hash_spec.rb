@@ -25,9 +25,9 @@ describe HumanHash do
     digest = '60ad8d0d871b6095808297'
     words = 4
     separator = '-'
-    HumanHash.humanize(digest, words).should == 'sodium-magnesium-nineteen-hydrogen'
+    HumanHash.humanize(digest, words, separator).should == 'sodium-magnesium-nineteen-hydrogen'
 
     separator = ' '
-    HumanHash.humanize(digest, words).should == 'sodium magnesium nineteen hydrogen'
+    HumanHash.humanize(digest, words, separator).should == 'sodium magnesium nineteen hydrogen'
   end    
 end
