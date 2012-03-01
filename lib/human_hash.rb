@@ -1,4 +1,6 @@
 require "human_hash/version"
+
+# HumanHash - Human-readable representations of digests
 module HumanHash  
   @word_list = [
       'ack', 'alabama', 'alanine', 'alaska', 'alpha', 'angel', 'apart', 'april',
@@ -39,6 +41,17 @@ module HumanHash
       'zulu'
   ]
 
+  # Make a digest human-readable
+  #
+  # Example:
+  #   >> HumanHash.humanize('60ad8d0d871b6095808297)
+  #   => sodium-magnesium-nineteen-hydrogen
+  #
+  # Arguments:
+  #   hexdigest: (String)
+  #   words: (Integer)
+  #   separator: (String)
+
   def self.humanize(hexdigest, words=4, separator='-')
   	limit = hexdigest.length / 2
   	unpack_format = 'A2' * limit
@@ -46,6 +59,16 @@ module HumanHash
   	compressed = compress(bytes, words)
   	return (compressed.collect { |x| @word_list[x] }).join(separator)
   end
+
+  # Compress a byte array into a shorter length
+  #
+  # Example:
+  #   >> HumanHash.compress([96, 173, 141, 13, 135, 27, 96, 149, 128, 130, 151])
+  #   => [205, 128, 156, 96]
+  #
+  # Arguments:
+  #   bytes: (Array)
+  #   target: (Integer)
 
   def self.compress(bytes, target)
   	bytes_copy = bytes.clone
