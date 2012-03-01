@@ -1,4 +1,5 @@
-class HumanHash  
+require "human_hash/version"
+module HumanHash  
   @word_list = [
       'ack', 'alabama', 'alanine', 'alaska', 'alpha', 'angel', 'apart', 'april',
       'arizona', 'arkansas', 'artist', 'asparagus', 'aspen', 'august', 'autumn',
