@@ -1,17 +1,17 @@
-# HumanHash
+# HumanDigest
 
-HumanHash is a Ruby library that creates human-readable representations of digests. 
+HumanDigest is a Ruby library that creates human-readable representations of digests. 
 
 ## Example
 
 ```ruby
 digest = '60ad8d0d871b6095808297'
-puts HumanHash.humanize(digest)  # => sodium-magnesium-nineteen-hydrogen
+puts HumanDigest.humanize(digest)  # => sodium-magnesium-nineteen-hydrogen
 ```
 
 ## Inspiration
 
-HumanHash is a Ruby port of the [humanhash library for python](https://github.com/zacharyvoase/humanhash)
+HumanDigest is a Ruby port of the [humanhash library for python](https://github.com/zacharyvoase/humanhash)
 
 
 ## License

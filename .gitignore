@@ -1,4 +1,4 @@
 .rvmrc
 .DS_Store
 Gemfile.lock
-human_hash-*.gem
+human_digest-*.gem

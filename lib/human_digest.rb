@@ -1,7 +1,7 @@
-require "human_hash/version"
+require "human_digest/version"
 
-# HumanHash - Human-readable representations of digests
-module HumanHash  
+# HumanDigest - Human-readable representations of digests
+module HumanDigest
   @word_list = [
       'ack', 'alabama', 'alanine', 'alaska', 'alpha', 'angel', 'apart', 'april',
       'arizona', 'arkansas', 'artist', 'asparagus', 'aspen', 'august', 'autumn',
@@ -44,7 +44,7 @@ module HumanHash
   # Make a digest human-readable
   #
   # Example:
-  #   >> HumanHash.humanize('60ad8d0d871b6095808297)
+  #   >> HumanDigest.humanize('60ad8d0d871b6095808297)
   #   => sodium-magnesium-nineteen-hydrogen
   #
   # Arguments:
@@ -63,7 +63,7 @@ module HumanHash
   # Compress a byte array into a shorter length
   #
   # Example:
-  #   >> HumanHash.compress([96, 173, 141, 13, 135, 27, 96, 149, 128, 130, 151])
+  #   >> HumanDigest.compress([96, 173, 141, 13, 135, 27, 96, 149, 128, 130, 151])
   #   => [205, 128, 156, 96]
   #
   # Arguments:
