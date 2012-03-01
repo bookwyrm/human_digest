@@ -15,19 +15,19 @@ describe HumanHash do
   it "should take a word count" do
     digest = '60ad8d0d871b6095808297'
     words = 4
-    HumanHash.humanize(digest, words).should == 'sodium-magnesium-nineteen-hydrogen'
+    HumanHash.humanize(digest, words).should eq('sodium-magnesium-nineteen-hydrogen')
     
     words = 3
-    HumanHash.humanize(digest, words).should == 'equal-monkey-hydrogen'    
+    HumanHash.humanize(digest, words).should eq('equal-monkey-hydrogen')
   end
   
   it "should take a separator" do
     digest = '60ad8d0d871b6095808297'
     words = 4
     separator = '-'
-    HumanHash.humanize(digest, words, separator).should == 'sodium-magnesium-nineteen-hydrogen'
+    HumanHash.humanize(digest, words, separator).should eq('sodium-magnesium-nineteen-hydrogen')
 
     separator = ' '
-    HumanHash.humanize(digest, words, separator).should == 'sodium magnesium nineteen hydrogen'
+    HumanHash.humanize(digest, words, separator).should eq('sodium magnesium nineteen hydrogen')
   end    
 end
