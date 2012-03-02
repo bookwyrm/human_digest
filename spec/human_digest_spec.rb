@@ -1,4 +1,5 @@
 require 'human_digest'
+require 'bson'
 
 describe HumanDigest do
   it "should generate a human digest" do
@@ -29,5 +30,10 @@ describe HumanDigest do
 
     separator = ' '
     HumanDigest.humanize(digest, words, separator).should eq('sodium magnesium nineteen hydrogen')
-  end    
+  end
+  
+  it "should humanize a BSON::ObjectId" do
+    digest = BSON::ObjectId('4f501caf73e5ecb2c3000003')
+    HumanDigest.humanize(digest).should eq('alaska-echo-nitrogen-alaska')
+  end
 end

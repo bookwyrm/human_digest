@@ -53,6 +53,7 @@ module HumanDigest
   #   separator: (String)
 
   def self.humanize(hexdigest, words=4, separator='-')
+    hexdigest = hexdigest.to_s unless hexdigest.respond_to?(:length) and hexdigest.respond_to?(:unpack)
   	limit = hexdigest.length / 2
   	unpack_format = 'A2' * limit
   	bytes = hexdigest.unpack(unpack_format).collect { |x| x.hex }
