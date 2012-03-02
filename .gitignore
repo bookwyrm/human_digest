@@ -1,4 +1,5 @@
 .rvmrc
+.rspec
 .DS_Store
 Gemfile.lock
 human_digest-*.gem
