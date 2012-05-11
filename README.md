@@ -1,4 +1,4 @@
-# HumanDigest
+# HumanDigest [![Build Status](https://secure.travis-ci.org/bookwyrm/human_digest.png?branch=master)](http://travis-ci.org/bookwyrm/human_digest)
 
 HumanDigest is a Ruby library that creates human-readable representations of digests. 
 
