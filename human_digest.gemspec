@@ -5,7 +5,6 @@ require "human_digest/version"
 Gem::Specification.new do |s|
   s.name        = 'human_digest'
   s.version     = HumanDigest::VERSION
-  s.date        = '2012-05-11'
   s.summary     = "HumanDigest"
   s.description = "Human-readable digests"
   s.authors     = ["Matt Vanderpol"]
